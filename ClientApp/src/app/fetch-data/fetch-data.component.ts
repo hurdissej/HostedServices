@@ -12,7 +12,7 @@ export class FetchDataComponent {
   pollingData: any; 
 
   constructor(private http: HttpClient,  @Inject('BASE_URL') private baseUrl: string) { 
-      this.pollingData = Observable.interval(8000)
+      this.pollingData = Observable.interval(6000)
       .switchMap(() => http.get<Quote[]>(this.baseUrl + 'api/Quote'))
       .subscribe(result => {
         this.quote = result;
