@@ -1,0 +1,16 @@
+<h1>Programming Quote</h1>
+
+<p>This component polls a hosted service!</p>
+
+<p *ngIf="!quote">
+  <em>Loading...</em>
+</p>
+<div *ngIf="quote">
+  <h3>
+    "{{quote.quote}}"
+  </h3>
+
+  <h2>
+    - {{ quote.author}}
+  </h2>
+</div>
